@@ -3,6 +3,14 @@ import {PORT,uri} from "./config.js"
 import bookRoutes from "./Routes/BooksRoutes.js"
 import mongoose from "mongoose"
 
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'http://localhost:3000', // Replace with your frontend URL
+  methods: 'GET,PUT,POST,DELETE',
+  allowedHeaders:['Content-Type']
+}
+))
 
 
 
